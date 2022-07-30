@@ -163,3 +163,58 @@ cu (xpath)[1]
 ● 1 funcție ca și cea de la clasă prin care să pot alege eu prin parametru cu
 ce element vreau să interacționez.'''
 
+
+'''3 după atribut valoare'''
+
+# chrome.get('http://automationpractice.com/index.php')
+# chrome.find_element(By.XPATH, "//a[@title='Women']").click()
+# sleep(3)
+
+# chrome.find_element(By.XPATH, "//div[@id='htmlcontent_top']//li[@class='htmlcontent-item-1 col-xs-4']//img[@class='item-img']").click()
+# sleep(3)
+
+# chrome.find_element(By.XPATH, "//img[@alt='My Store']").click()
+# sleep(3)
+
+'''3 după textul de pe element'''
+
+# chrome.get('https://the-internet.herokuapp.com/')
+# chrome.find_element(By.XPATH, "//a[normalize-space()='A/B Testing']").click()
+# sleep(3)
+
+# chrome.find_element(By.XPATH, "//a[normalize-space()='Broken Images']").click()
+# sleep(3)
+
+# chrome.find_element(By.XPATH, "//a[normalize-space()='Hovers']").click()
+# sleep(3)
+
+'''1 după parțial text'''
+
+# chrome.find_element(By.XPATH, "").click()
+# sleep(3)
+
+'''1 cu SAU, folosind pipe |'''
+
+# chrome.find_element(By.XPATH, "//a[normalize-space()='Checkboxes']|//a[normalize-space()='Context Menu']").click()
+# sleep(3)
+
+'''1 cu *'''
+
+# chrome.get('https://formy-project.herokuapp.com/form')
+# chrome.find_element(By.XPATH, '//*[@id="job-title"]').send_keys('Maintenance Technician')
+# sleep(3)
+
+'''1 în care le iei ca pe o listă de xpath și în python ajunge 1 element, deci
+cu (xpath)[1]'''
+
+# chrome.get('https://formy-project.herokuapp.com/form')
+# chrome.find_element(By.XPATH, '/html[1]/body[1]/div[1]/form[1]/div[1]/div[4]/div[4]/input[1]').click()
+# sleep(3)
+
+'''1 în care să folosești parent::'''
+
+chrome.get('https://www.phptravels.net/')
+chrome.find_element(By.XPATH, '/html[1]/body[1]/div[1]/form[1]/div[1]/div[4]/div[4]/input[1]').click()
+sleep(3)
+
+
